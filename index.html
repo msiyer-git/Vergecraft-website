@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VergeCraft</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101510;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            padding: 20px;
+            background: #0a0d0a;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+        }
+
+        .hero {
+            padding: 120px 20px;
+        }
+
+        h1 {
+            font-size: 70px;
+            margin: 0;
+        }
+
+        .green {
+            color: #55ff55;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .features {
+            padding: 60px;
+            background: #161d16;
+        }
+
+        .card {
+            display: inline-block;
+            width: 220px;
+            padding: 25px;
+            margin: 15px;
+            background: #202a20;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <b>VERGECRAFT</b>
+    <a href="#">Home</a>
+    <a href="#">Rules</a>
+    <a href="#">Staff</a>
+    <a href="#">Discord</a>
+</nav>
+
+<section class="hero">
+
+    <h1>VERGE<span class="green">CRAFT</span></h1>
+
+    <h2>A next-generation Minecraft server.</h2>
+
+    <p>Survival • Events • Custom Features • Community</p>
+
+    <button onclick="copyIP()">PLAY NOW</button>
+
+    <p id="message"></p>
+
+</section>
+
+<section class="features">
+
+    <h2>Why VergeCraft?</h2>
+
+    <div class="card">
+        <h3>⚔️ Survival</h3>
+        <p>A custom survival experience.</p>
+    </div>
+
+    <div class="card">
+        <h3>🏆 Events</h3>
+        <p>Competitions and community events.</p>
+    </div>
+
+    <div class="card">
+        <h3>🛡️ Staff</h3>
+        <p>Active moderation and support.</p>
+    </div>
+
+</section>
+
+<script>
+function copyIP() {
+    navigator.clipboard.writeText("play.vergecraft.com");
+    document.getElementById("message").innerText =
+        "Server IP copied!";
+}
+</script>
+
+</body>
+</html>
