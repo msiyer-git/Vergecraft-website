@@ -1,241 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>VergeCraft</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Minecraft-style block font -->
+    <title>VergeCraft | Minecraft Survival</title>
+
+    <link rel="stylesheet" href="styles.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #101510;
-            color: white;
-            text-align: center;
-        }
-
-        nav {
-            padding: 20px;
-            background: #0a0d0a;
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
-            color: white;
-            margin: 20px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            color: #55ff55;
-        }
-
-        .hero {
-            padding: 120px 20px;
-        }
-
-        h1 {
-            font-family: "Press Start 2P", monospace;
-            font-size: 55px;
-            color: #55ff55;
-
-            text-shadow:
-                4px 4px #1f7a1f,
-                7px 7px #000;
-
-            margin: 0;
-        }
-
-        button {
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            background: #55ff55;
-            color: black;
-            font-weight: bold;
-        }
-
-        button:hover {
-            background: #37cc37;
-        }
-
-        .features {
-            padding: 60px;
-            background: #161d16;
-        }
-
-        .card {
-            display: inline-block;
-            width: 220px;
-            min-height: 150px;
-            vertical-align: top;
-            padding: 25px;
-            margin: 15px;
-            background: #202a20;
-            border-radius: 12px;
-        }
-
-        .rules {
-            padding: 70px 20px;
-        }
-
-        .rules-box {
-            max-width: 500px;
-            margin: auto;
-            background: #202a20;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: left;
-        }
-
-        .rules-box p {
-            font-size: 18px;
-            padding: 8px;
-        }
-
-        .staff {
-            padding: 70px 20px;
-            background: #161d16;
-        }
-
-        .owner-name {
-            color: red;
-            font-size: 26px;
-            font-weight: bold;
-        }
-
-        .owner-rank {
-            color: red;
-            font-weight: bold;
-        }
-
-        footer {
-            padding: 30px;
-            background: #0a0d0a;
-            color: gray;
-        }
-    </style>
 </head>
 
 <body>
 
 <nav>
-    <b>VERGECRAFT</b>
+    <a class="nav-logo" href="index.html">VERGECRAFT</a>
 
-    <a href="#home">Home</a>
-    <a href="#why">Why VergeCraft</a>
-    <a href="#rules">Rules</a>
-    <a href="#staff">Staff</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#why">Why VergeCraft</a>
+        <a href="rules.html">Rules</a>
+        <a href="staff.html">Staff</a>
+    </div>
 </nav>
 
 
-<!-- HOME -->
+<header class="hero">
 
-<section class="hero" id="home">
+    <div class="hero-content">
 
-    <h1>VERGECRAFT</h1>
+        <p class="small-title">WELCOME TO</p>
 
-    <h2>A next-generation Minecraft server.</h2>
+        <h1>VERGECRAFT</h1>
 
-    <p>Survival • Adventure • Community</p>
+        <h2>Your adventure. Your world. Your story.</h2>
 
-    <button onclick="copyIP()">PLAY NOW</button>
-
-    <p id="message"></p>
-
-</section>
-
-
-<!-- WHY VERGECRAFT -->
-
-<section class="features" id="why">
-
-    <h2>Why VergeCraft?</h2>
-
-    <div class="card">
-        <h3>⚔️ Survival</h3>
-
-        <p>
-            Build, explore, survive and create your own base
-            with other players.
+        <p class="hero-description">
+            A community-focused Minecraft survival server built
+            around exploration, progression and unforgettable adventures.
         </p>
-    </div>
 
+        <div class="buttons">
 
-    <div class="card">
-        <h3>🛡️ Moderation</h3>
+            <button class="play-button" onclick="copyIP()">
+                PLAY.VERGEMC.COM
+            </button>
 
-        <p>
-            Active staff help keep the server fair,
-            friendly and enjoyable.
-        </p>
-    </div>
+            <a class="secondary-button" href="rules.html">
+                VIEW RULES
+            </a>
 
-
-    <div class="card">
-        <h3>🗺️ Adventure</h3>
-
-        <p>
-            Explore the world, discover new places
-            and create your own adventures.
-        </p>
-    </div>
-
-</section>
-
-
-<!-- RULES -->
-
-<section class="rules" id="rules">
-
-    <h2>Server Rules</h2>
-
-    <div class="rules-box">
-
-        <p>1. No stealing</p>
-
-        <p>2. No scamming</p>
-
-        <p>3. Listen to staff</p>
-
-        <p>4. No excessive swearing</p>
-
-    </div>
-
-</section>
-
-
-<!-- STAFF -->
-
-<section class="staff" id="staff">
-
-    <h2>Staff</h2>
-
-    <div class="card">
-
-        <div class="owner-name">
-            Nervoza
         </div>
 
-        <p class="owner-rank">
-            OWNER
-        </p>
+        <p id="copyMessage"></p>
 
     </div>
+
+</header>
+
+
+<section class="why-section" id="why">
+
+    <p class="section-small">MORE THAN SURVIVAL</p>
+
+    <h2 class="section-title">WHY VERGECRAFT?</h2>
+
+    <p class="why-paragraph">
+        VergeCraft isn't just another world to join and forget.
+        It's a server built around creating something worth coming
+        back to. Build your base, explore with friends, trade with
+        other players and take on new adventures while becoming part
+        of a growing community. With fair moderation, an active staff
+        team and a world shaped by its players, VergeCraft gives you
+        the freedom of survival while making every session feel like
+        part of something bigger.
+    </p>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">⚔️</div>
+            <h3>SURVIVAL</h3>
+            <p>
+                Build your base, gather resources and create
+                your own place in the VergeCraft world.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>ADVENTURE</h3>
+            <p>
+                Explore the world, discover new places and
+                experience the server your own way.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>FAIR MODERATION</h3>
+            <p>
+                Clear rules and active staff help keep
+                gameplay fair and enjoyable for everyone.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">🌎</div>
+            <h3>COMMUNITY</h3>
+            <p>
+                Meet players, build together and become
+                part of a growing Minecraft community.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="join-section">
+
+    <h2>READY TO JOIN?</h2>
+
+    <p>Jump into VergeCraft and start your adventure.</p>
+
+    <button class="play-button" onclick="copyIP()">
+        PLAY.VERGEMC.COM
+    </button>
 
 </section>
 
 
 <footer>
-    © 2026 VergeCraft
+
+    <div class="footer-logo">
+        VERGECRAFT
+    </div>
+
+    <p>play.vergemc.com</p>
+
+    <p class="copyright">
+        © 2026 VergeCraft • Not affiliated with Mojang or Microsoft
+    </p>
+
 </footer>
 
 
@@ -245,8 +157,14 @@ function copyIP() {
 
     navigator.clipboard.writeText("play.vergemc.com");
 
-    document.getElementById("message").innerText =
-        "Server IP copied: play.vergemc.com";
+    document.getElementById("copyMessage").innerText =
+        "✓ Server IP copied!";
+
+    setTimeout(function() {
+
+        document.getElementById("copyMessage").innerText = "";
+
+    }, 2500);
 
 }
 
