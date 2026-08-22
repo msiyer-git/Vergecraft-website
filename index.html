@@ -3,7 +3,14 @@
 <head>
     <title>VergeCraft</title>
 
+    <!-- Minecraft-style block font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -15,7 +22,8 @@
         nav {
             padding: 20px;
             background: #0a0d0a;
-            font-size: 20px;
+            position: sticky;
+            top: 0;
         }
 
         nav a {
@@ -24,17 +32,24 @@
             text-decoration: none;
         }
 
+        nav a:hover {
+            color: #55ff55;
+        }
+
         .hero {
             padding: 120px 20px;
         }
 
         h1 {
-            font-size: 70px;
-            margin: 0;
-        }
-
-        .green {
+            font-family: "Press Start 2P", monospace;
+            font-size: 55px;
             color: #55ff55;
+
+            text-shadow:
+                4px 4px #1f7a1f,
+                7px 7px #000;
+
+            margin: 0;
         }
 
         button {
@@ -43,6 +58,13 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
+            background: #55ff55;
+            color: black;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #37cc37;
         }
 
         .features {
@@ -53,10 +75,52 @@
         .card {
             display: inline-block;
             width: 220px;
+            min-height: 150px;
+            vertical-align: top;
             padding: 25px;
             margin: 15px;
             background: #202a20;
             border-radius: 12px;
+        }
+
+        .rules {
+            padding: 70px 20px;
+        }
+
+        .rules-box {
+            max-width: 500px;
+            margin: auto;
+            background: #202a20;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .rules-box p {
+            font-size: 18px;
+            padding: 8px;
+        }
+
+        .staff {
+            padding: 70px 20px;
+            background: #161d16;
+        }
+
+        .owner-name {
+            color: red;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .owner-rank {
+            color: red;
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 30px;
+            background: #0a0d0a;
+            color: gray;
         }
     </style>
 </head>
@@ -65,19 +129,23 @@
 
 <nav>
     <b>VERGECRAFT</b>
-    <a href="#">Home</a>
-    <a href="#">Rules</a>
-    <a href="#">Staff</a>
-    <a href="#">Discord</a>
+
+    <a href="#home">Home</a>
+    <a href="#why">Why VergeCraft</a>
+    <a href="#rules">Rules</a>
+    <a href="#staff">Staff</a>
 </nav>
 
-<section class="hero">
 
-    <h1>VERGE<span class="green">CRAFT</span></h1>
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <h1>VERGECRAFT</h1>
 
     <h2>A next-generation Minecraft server.</h2>
 
-    <p>Survival • Events • Custom Features • Community</p>
+    <p>Survival • Adventure • Community</p>
 
     <button onclick="copyIP()">PLAY NOW</button>
 
@@ -85,33 +153,103 @@
 
 </section>
 
-<section class="features">
+
+<!-- WHY VERGECRAFT -->
+
+<section class="features" id="why">
 
     <h2>Why VergeCraft?</h2>
 
     <div class="card">
         <h3>⚔️ Survival</h3>
-        <p>A custom survival experience.</p>
+
+        <p>
+            Build, explore, survive and create your own base
+            with other players.
+        </p>
     </div>
 
-    <div class="card">
-        <h3>🏆 Events</h3>
-        <p>Competitions and community events.</p>
-    </div>
 
     <div class="card">
-        <h3>🛡️ Staff</h3>
-        <p>Active moderation and support.</p>
+        <h3>🛡️ Moderation</h3>
+
+        <p>
+            Active staff help keep the server fair,
+            friendly and enjoyable.
+        </p>
+    </div>
+
+
+    <div class="card">
+        <h3>🗺️ Adventure</h3>
+
+        <p>
+            Explore the world, discover new places
+            and create your own adventures.
+        </p>
     </div>
 
 </section>
 
+
+<!-- RULES -->
+
+<section class="rules" id="rules">
+
+    <h2>Server Rules</h2>
+
+    <div class="rules-box">
+
+        <p>1. No stealing</p>
+
+        <p>2. No scamming</p>
+
+        <p>3. Listen to staff</p>
+
+        <p>4. No excessive swearing</p>
+
+    </div>
+
+</section>
+
+
+<!-- STAFF -->
+
+<section class="staff" id="staff">
+
+    <h2>Staff</h2>
+
+    <div class="card">
+
+        <div class="owner-name">
+            Nervoza
+        </div>
+
+        <p class="owner-rank">
+            OWNER
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 VergeCraft
+</footer>
+
+
 <script>
+
 function copyIP() {
-    navigator.clipboard.writeText("play.vergecraft.com");
+
+    navigator.clipboard.writeText("play.vergemc.com");
+
     document.getElementById("message").innerText =
-        "Server IP copied!";
+        "Server IP copied: play.vergemc.com";
+
 }
+
 </script>
 
 </body>
