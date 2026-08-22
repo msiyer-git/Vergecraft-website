@@ -28,10 +28,9 @@
     <h2>Survive. Explore. Build your story.</h2>
     <p class="hero-description">A community-focused Minecraft survival server built for adventure, fair gameplay and a world you actually want to come back to.</p>
     <div class="buttons">
-      <button class="play-button" onclick="copyIP()">PLAY.VERGEMC.COM</button>
+      <button class="play-button" type="button" onclick="copyServerIP(this)">PLAY.VERGEMC.COM</button>
       <a class="secondary-button" href="why.html">WHY VERGEMC?</a>
     </div>
-    <p id="copyMessage"></p>
     <div class="hero-tags"><span>SURVIVAL</span><span>ADVENTURE</span><span>COMMUNITY</span></div>
   </div>
 </header>
@@ -51,7 +50,7 @@
 <section class="join-section">
   <h2>READY TO JOIN?</h2>
   <p>Jump into VergeMC and start your adventure.</p>
-  <button class="play-button" onclick="copyIP()">PLAY.VERGEMC.COM</button>
+  <button class="play-button" type="button" onclick="copyServerIP(this)">PLAY.VERGEMC.COM</button>
 </section>
 
 <footer>
@@ -60,12 +59,6 @@
   <p class="copyright">© 2026 VergeMC • Not affiliated with Mojang or Microsoft</p>
 </footer>
 
-<script>
-function copyIP() {
-  navigator.clipboard.writeText("play.vergemc.com");
-  document.getElementById("copyMessage").innerText = "✓ Server IP copied!";
-  setTimeout(() => document.getElementById("copyMessage").innerText = "", 2500);
-}
-</script>
+<script src="script.js"></script>
 </body>
 </html>
